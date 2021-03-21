@@ -1,0 +1,49 @@
+{
+  "name": "mern-auth",
+  "version": "1.0.0",
+  "description": "Mern authentification",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "JohnDavis",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.738.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "excel4node": "^1.7.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-validator": "^6.2.0",
+    "form-data": "^3.0.0",
+    "http-status-codes": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^2.2.5",
+    "nexmo": "^2.6.0",
+    "nodemailer": "^6.4.2",
+    "nodemon": "^1.19.4",
+    "notenv": "^2.0.3",
+    "otplib": "^11.0.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "react-circular-progressbar": "^2.0.3",
+    "react-dropzone": "^11.0.3",
+    "sequelize": "^6.3.5",
+    "xlsx": "^0.16.9"
+  },
+  "engines": {
+    "node": "10.16.3"
+  }
+}
