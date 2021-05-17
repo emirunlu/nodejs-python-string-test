@@ -11,9 +11,6 @@ exports.calculateString = (req, res) => {
         null,
         function(err, results) {
             if (err) throw err;
-            res.status(500).send({
-                message: "error: Error occurred calling Python Calculate script"
-            });
 
             const data = JSON.parse(results);
             data.forEach(function(elem) {
